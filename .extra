@@ -1,2 +1,2 @@
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/mysql/bin:$PATH"
 PS1="\[\e[0;33m\]\h:\W \u\$ \[\e[m\]";
