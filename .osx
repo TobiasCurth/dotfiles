@@ -145,7 +145,7 @@ defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 
-# Don’t animate opening applications from the Dock
+# Animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool true
 
 # Remove the auto-hiding Dock delay
@@ -153,8 +153,8 @@ defaults write com.apple.dock launchanim -bool true
 # Remove the animation when hiding/showing the Dock
 # defaults write com.apple.dock autohide-time-modifier -float 0
 
-# Enable the 2D Dock
-defaults write com.apple.dock no-glass -bool true
+# Enable the 3D Dock
+defaults write com.apple.dock no-glass -bool false
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
