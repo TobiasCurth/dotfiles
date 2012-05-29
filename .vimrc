@@ -28,8 +28,14 @@ set number
 syntax on
 " Highlight current line
 set cursorline
+" Automatically indent
+" set autoindent
 " Make tabs as wide as two spaces
-set tabstop=4
+" set tabstop=4
+" Smart tabs 
+:set noet sts=0 sw=4 ts=4
+:set cindent
+:set cinoptions=(0,u0,U0
 " Show “invisible” characters
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 " set list

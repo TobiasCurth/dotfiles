@@ -1,2 +1,5 @@
 export PATH="/usr/local/bin:/usr/local/mysql/bin:$PATH"
-PS1="\[\e[0;33m\]\h:\W \u\$ \[\e[m\]";
+
+alias pear="php /usr/lib/php/pear/pearcmd.php" 
+alias pecl="php /usr/lib/php/pear/peclcmd.php" 
+
