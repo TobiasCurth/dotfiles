@@ -9,9 +9,17 @@ brew install wget --enable-iri
 
 # Install everything else
 brew install cowsay
+brew install git
+brew install postgres
+brew install composer
+
+# Install and configure node
 brew install node
 curl http://npmjs.org/install.sh | sh
-brew install postgres
+npm update
+npm upgrade
+npm install -g less
+npm install -g nodeunit
 
 # This one might fail eventually
 brew install svn
