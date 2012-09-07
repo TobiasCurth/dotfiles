@@ -12,3 +12,8 @@ Thumbs.db
 
 # PHPStorm
 .idea/*
+*.xml
+
+.idea/misc.xml
+
+.idea/workspace.xml
