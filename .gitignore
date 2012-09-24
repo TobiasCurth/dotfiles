@@ -11,9 +11,5 @@ Thumbs.db
 .Trashes
 
 # PHPStorm
-.idea/*
-*.xml
+.idea/
 
-.idea/misc.xml
-
-.idea/workspace.xml
