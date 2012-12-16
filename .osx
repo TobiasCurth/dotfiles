@@ -241,3 +241,6 @@ echo "Done. Note that some of these changes require a logout/restart to take eff
 
 # 0 = RAM, 3 = both, 5 = Disc
 sudo pmset -a hibernatemode 0; rm /var/vm/sleepimage
+
+# Disable Local time Machine Backups
+sudo tmutil disablelocal
