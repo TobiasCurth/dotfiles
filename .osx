@@ -244,3 +244,6 @@ sudo pmset -a hibernatemode 0; rm /var/vm/sleepimage
 
 # Disable Local time Machine Backups
 sudo tmutil disablelocal
+
+# Disable Sudden Motion Sensor
+sudo pmset -a sms 0

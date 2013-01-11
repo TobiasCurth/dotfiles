@@ -1,6 +1,6 @@
 # PATH additions
 #export PATH="/usr/local/bin:~/bin:/Applications/MAMP/bin/apache2/bin:/Applications/MAMP/bin/php/php5.4.4/bin:/usr/local/share/npm/bin:$PATH"
-export PATH="/usr/local/bin:/Applications/MAMP/bin/apache2/bin::/Applications/MAMP/bin/php/php5.4.4/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/local/sbin:/Applications/MAMP/bin/apache2/bin::/Applications/MAMP/bin/php/php5.4.4/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export NODE_PATH=".:/usr/local/lib/node_modules:$NODE_PATH"
 
 # PHP configuration
