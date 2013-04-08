@@ -8,6 +8,7 @@ alias ch="cd ~/Dropbox/Cyberhouse"
 alias s="cd ~/Sites"
 alias v="vim"
 alias V="sudo vim"
+alias cdbrew="cd /usr/local/Library/Formula"
 
 # List all files colorized in long format
 alias l="ls -Gl"

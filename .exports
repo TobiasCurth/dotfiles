@@ -11,3 +11,5 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:ll:ld:..:...:cd:cd -:clear:pwd;exit:date:* --help"
+
+export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
