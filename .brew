@@ -1,29 +1,20 @@
 # Make sure we’re using the latest Homebrew
-#brew update
+brew update
 #
 ## Upgrade any already-installed formulae
-#brew upgrade
+brew upgrade
 #
 ## Install wget with IRI support
-#brew install wget --enable-iri
+brew install wget --enable-iri
+
 #
 ## Install everything else
-#brew install cowsay
-#brew install git
-#brew install postgres
-#brew install composer
-#brew install php53 --with-intl --with-pgsql --with-mysql
-#brew install php53-xdebug
-#brew install php54 --with-intl --with-pgsql --with-mysql
-#brew install php54-xdebug
-#
-## Install and configure node
-#brew install node
-#curl http://npmjs.org/install.sh | sh
-#npm update
-#npm upgrade
-#npm install -g less
-#npm install -g nodeunit
-#
-## This one might fail eventually
-#brew install svn
+brew install git
+brew install composer
+brew install php54 --with-mysql
+brew install php54-xdebug
+brew install mysql
+brew install android-sdk
+brew install fuse4x-kext
+brew install fuse4x
+
