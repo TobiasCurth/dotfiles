@@ -1,6 +1,10 @@
-# Easier navigation: .., ..., ~ and -
+# Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
 
 # Shortcuts
 alias d="cd ~/Dropbox"
@@ -8,6 +12,10 @@ alias ch="cd ~/Dropbox/Cyberhouse"
 alias s="cd ~/Sites"
 alias v="vim"
 alias V="sudo vim"
+alias o="open"
+alias oo="open ."
+
+#Folder of Brew
 alias cdbrew="cd /usr/local/Library/Formula"
 
 # List all files colorized in long format
@@ -30,8 +38,11 @@ fi
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Get week number
+alias week='date +%V'
+
 # Get OS X Software Updates, update Homebrew itself, and upgrade installed Homebrew packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; '
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -59,6 +70,10 @@ alias flush="dscacheutil -flushcache"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Clean up LaunchServices to remove duplicates in the “Open With” menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
 
 # File size
 alias fs="stat -f \"%z bytes\""
