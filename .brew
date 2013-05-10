@@ -1,11 +1,26 @@
+#!/usr/bin/env bash
+
 # Make sure we’re using the latest Homebrew
 brew update
-#
-## Upgrade any already-installed formulae
+
+# Upgrade any already-installed formulae
 brew upgrade
-#
+
+# Install GNU core utilities (those that come with OS X are outdated)
+brew install coreutils
+echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
+
+# Install Bash 4
+brew install bash
+
 ## Install wget with IRI support
 brew install wget --enable-iri
+
+# Install more recent versions of some OS X tools
+brew tap homebrew/dupes
+brew install homebrew/dupes/grep
+brew tap josegonzalez/homebrew-php
+brew install php54
 
 #
 ## Install everything else
@@ -18,3 +33,21 @@ brew install android-sdk
 brew install fuse4x-kext
 brew install fuse4x
 
+# Install native apps
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+function installcask() {
+	if brew cask info "${@}" | grep "Not installed" > /dev/null; then
+		brew cask install "${@}"
+	else
+		echo "${@} is already installed."
+	fi
+}
+
+installcask dropbox
+installcask google-chrome
+installcask macvim
+
+# Remove outdated versions from the cellar
+brew cleanup
