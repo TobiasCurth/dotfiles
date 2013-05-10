@@ -226,7 +226,7 @@ defaults write com.apple.finder ShowPathBar -bool true
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Display full POSIX path as Finder window title
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
@@ -452,10 +452,10 @@ defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Use a modified version of the Pro theme by default in Terminal.app
-#open "$HOME/init/Mathias.terminal"
-#sleep 1 # Wait a bit to make sure the theme is loaded
-#defaults write com.apple.terminal "Default Window Settings" -string "Mathias"
-#defaults write com.apple.terminal "Startup Window Settings" -string "Mathias"
+open "$HOME/git/dotfiles/terminal/my.terminal"
+sleep 1 # Wait a bit to make sure the theme is loaded
+defaults write com.apple.terminal "Default Window Settings" -string "my"
+defaults write com.apple.terminal "Startup Window Settings" -string "my"
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first
