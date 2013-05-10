@@ -20,7 +20,6 @@ brew install wget --enable-iri
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 brew tap josegonzalez/homebrew-php
-brew install php54
 
 #
 ## Install everything else
@@ -46,8 +45,12 @@ function installcask() {
 }
 
 installcask dropbox
-installcask google-chrome
-installcask macvim
+installcask skype
+installcask XtraFinder
+installcask IntellijUltimate
+installcask Textmate2
+installcask TrueCrypt
+
 
 # Remove outdated versions from the cellar
 brew cleanup
