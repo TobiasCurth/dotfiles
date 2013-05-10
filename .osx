@@ -99,7 +99,7 @@ systemsetup -setcomputersleep Off > /dev/null
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist >/dev/null 2>&1
 
 
 ###############################################################################
@@ -308,7 +308,7 @@ chflags nohidden ~/Library
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock tilesize -int 64
 
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
@@ -334,13 +334,13 @@ defaults write com.apple.dock expose-group-by-app -bool false
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
 
-# Disable Dashboard
+# Activate Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool false
 
 # Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
-# Remove the animation when hiding/showing the Dock
-defaults write com.apple.dock autohide-time-modifier -float 0
+# animation speed when hiding/showing the Dock
+defaults write com.apple.dock autohide-time-modifier -float 1.0
 
 # Enable the 2D Dock
 #defaults write com.apple.dock no-glass -bool false
@@ -524,7 +524,7 @@ defaults write com.google.Chrome ExtensionInstallSources -array "https://*.githu
 
 
 # 0 = RAM, 3 = both, 5 = Disc
-sudo pmset -a hibernatemode 3; rm /var/vm/sleepimage
+sudo pmset -a hibernatemode 3; sudo rm /var/vm/sleepimage
 
 # Disable Sudden Motion Sensor
 sudo pmset -a sms 0
@@ -537,8 +537,14 @@ sudo pmset -a sms 0
 ###############################################################################
 
 for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
-	"Mail" "Safari""SystemUIServer" "Terminal" \
+	"Mail" "Safari""SystemUIServer" \
 	 "iCal" "iTunes"; do
 	killall "$app" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+
+###############################################################################
+# Restart applications                                             #
+###############################################################################
+
+open /Applications/XtraFinder.app/
