@@ -99,7 +99,7 @@ systemsetup -setcomputersleep Off > /dev/null
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist >/dev/null 2>&1
+#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist >/dev/null 2>&1
 
 
 ###############################################################################
@@ -331,8 +331,8 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 # (i.e. use the old Exposé behavior instead)
 defaults write com.apple.dock expose-group-by-app -bool false
 
-# Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
+# Show Dashboard as a Space
+defaults write com.apple.dock dashboard-in-overlay -bool false
 
 # Activate Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool false
@@ -443,6 +443,9 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 # Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 
+# Force all mail to be displayed as plain text.
+defaults write com.apple.mail PreferPlainText -bool YES
+
 
 ###############################################################################
 # Terminal                                                                    #
@@ -544,7 +547,7 @@ done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
 
 ###############################################################################
-# Restart applications                                             #
+# Restart applications                                                        #
 ###############################################################################
 
 open /Applications/XtraFinder.app/

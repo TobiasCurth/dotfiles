@@ -113,3 +113,10 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # alias stfu="osascript -e 'set volume output muted true'"
 # alias pumpitup="osascript -e 'set volume 7'"
 # alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+
+
+###############################################################################
+# Youtube-DL                                             #
+###############################################################################
+
+alias mp3="youtube-dl -x --audio-format mp3 --audio-quality 0"
