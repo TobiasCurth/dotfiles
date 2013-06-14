@@ -1,7 +1,5 @@
 # PATH additions
-#export PATH="/usr/local/bin:~/bin:/Applications/MAMP/bin/apache2/bin:/Applications/MAMP/bin/php/php5.4.4/bin:/usr/local/share/npm/bin:$PATH"
-#export PATH="/usr/local/bin:/usr/local/sbin:/Applications/MAMP/bin/php/php5.4.4/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/php54/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/php54/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin"
 export NODE_PATH=".:/usr/local/lib/node_modules:$NODE_PATH"
 
 
