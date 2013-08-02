@@ -25,8 +25,8 @@ brew tap josegonzalez/homebrew-php
 ## Install everything else
 brew install git
 brew install composer
-brew install php54 --with-mysql
-brew install php54-xdebug
+brew install php55 --with-mysql
+brew install php55-xdebug
 brew install mysql
 brew install android-sdk
 brew install fuse4x-kext
@@ -37,11 +37,7 @@ brew tap phinze/homebrew-cask
 brew install brew-cask
 
 function installcask() {
-	if brew cask info "${@}" | grep "Not installed" > /dev/null; then
-		brew cask install "${@}"
-	else
-		echo "${@} is already installed."
-	fi
+	brew cask install "${@}" 2> /dev/null
 }
 
 installcask dropbox
