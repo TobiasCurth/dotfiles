@@ -23,7 +23,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 sudo pmset -a standbydelay 43200
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+# sudo nvram SystemAudioVolume=" "
 
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool true
@@ -574,7 +574,13 @@ sudo pmset -a hibernatemode 3; sudo rm /var/vm/sleepimage
 sudo pmset -a sms 0
 
 
+###############################################################################
+# Versions, Auto Save                                                         #
+###############################################################################
 
+# Disable Versions for textedit
+defaults write -app textedit  ApplePersistence -bool no
+defaults write -app textedit AutosavingDelay -int 0
 
 ###############################################################################
 # Kill affected applications                                                  #
