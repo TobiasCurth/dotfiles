@@ -13,7 +13,7 @@ echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH.
 # Install Bash 4
 brew install bash
 
-## Install wget with IRI support
+# Install wget with IRI support
 brew install wget --enable-iri
 
 # Install more recent versions of some OS X tools
