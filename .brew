@@ -44,8 +44,8 @@ installcask dropbox
 installcask skype
 installcask XtraFinder
 installcask IntellijUltimate
-installcask Textmate2
-installcask TrueCrypt
+installcask true-crypt
+installcask sequel-pro
 
 
 # Remove outdated versions from the cellar
